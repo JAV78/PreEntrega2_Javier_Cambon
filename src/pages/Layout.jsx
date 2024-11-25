@@ -1,7 +1,8 @@
 
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import Navbar from "../navbar/NavBar";
+import CartWidget from "../CartWidget";
+
 import "./Layout.css"
 
 function Layout() {
@@ -9,7 +10,8 @@ function Layout() {
     <>
        
      <nav>
-        <Navbar/>
+     <logo />
+       
         <ul>
             <li>
                 <Link to={"/"}>Home</Link>
@@ -23,7 +25,9 @@ function Layout() {
             <li>
                 <Link to={"/dulce"}>Dulce</Link>
             </li>
-        </ul>                   
+        </ul>  
+        <CartWidget/>       
+
     </nav>
    
     <Outlet/>
